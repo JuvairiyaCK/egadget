@@ -145,7 +145,7 @@ def Cancelorder(request,*args,**kwargs):
         order=Orders.objects.get(id=oid)
         subject="Order Cancelling Acknowledgment"
         msg=f"Your  Order for {order.product.title} is successfully Cancelled"
-        fr_om="juvairiyackck@gmail.com"
+        fr_om="dummy@example.com"
         to_ad=[request.user.email]
         send_mail(subject,msg,fr_om,to_ad)
         order.delete()
